@@ -43,14 +43,11 @@ $(TABLE): $(CLEANED) $(TOP_WORDS)
 clean:
 	rm -f $(CLEANED) $(TOKENS) $(FREQS) $(TOP_WORDS) $(TABLE) $(STOPPED)
 
-
 step1:
 	$(MAKE) clean $(CLEANED); head $(CLEANED)
 
-
 step2:
 	$(MAKE) clean $(STOPPED); head $(STOPPED)
-
 
 step3:
 	$(MAKE) clean $(FREQS); head $(FREQS)
